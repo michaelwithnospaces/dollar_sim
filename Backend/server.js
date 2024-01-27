@@ -3,6 +3,8 @@ const mongoose = require('mongoose')
 const express = require('express')
 const app = express()
 app.use(express.json())
+const financeRouter = require('./routes/finance')
+app.use('/finance', financeRouter)
 
 mongoose.connect(process.env.DATABASE_URL_FINANCE)
 const db = mongoose.connection
