@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import styles from './transactions.module.css';
 
 const Transactions = ({setBalance}) => {
     const [transactions, setTransactions] = useState([]);
@@ -26,16 +27,15 @@ const Transactions = ({setBalance}) => {
     return (
         <div className="transactions">
             {!isTransactionLoaded && <p>Loading...</p>}
-            {transactions.map((transaction, i) => {
                 return (
-                    <div key = {i} id = {transaction.id}>
-                        <p>{transaction.category}</p>
-                        <p>{transaction.item}</p>
-                        <p>{transaction.amount}</p>
-                        <p>{transaction.date}</p>
+                    <div>
+                        <ul>
+                            {transactions.map((transaction, i) => (
+                                <div><button id={styles.buttons} key = {i} >{transaction.category} {transaction.item} {transaction.amount}$</button></div>
+                            ))}
+                        </ul>
                     </div>
                 );
-            })}
         </div>
     );
 }

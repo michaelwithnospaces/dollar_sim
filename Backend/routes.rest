@@ -5,9 +5,9 @@ POST http://localhost:8000/finance/newTransaction
 Content-Type: application/json
 
 {
-    "category": "purses",
-    "item": "bluepurse",
-    "amount": -20,
+    "category": "electronics",
+    "item": "laptop",
+    "amount": -1000,
     "date": "1/4/24"
 }
 
