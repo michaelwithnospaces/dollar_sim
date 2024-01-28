@@ -1,35 +1,26 @@
-import React from "react";
-
-export const MainPage = () => {
+import Logo from './DollarSim-logos_black.png';
+import {useState} from 'react';
+import Transactions from './Transactions';
+const MainPage = () => {
+  const [balance, setBalance] = useState(0);
   return (
-    <div className="frame">
+    <div>
       <header>
-        <a href = '' className="text-wrapper-4">Finances</a>
-        <a href = '' className="text-wrapper-5">Jobs</a>
-        <a href = '' className="text-wrapper-6">Chat</a>
-        <a href = '' className="text-wrapper-7">Store</a>
+        <div className = 'header-item'><img src={Logo} className='Logo'/></div>
+        <div className = 'header-item'><a>Jobs</a></div>
+        <div className = 'header-item'>Chat</div>
+        <div className = 'header-item'>Store</div>
+        <div className = 'header-item'>Profile</div>
       </header>
-      <div className="overlap-wrapper">
-        <div className="overlap">
-          <img className="group" alt="Group" src="group.png" />
-          <img className="rectangle" alt="Rectangle" src="rectangle-1.svg" />
-          <div className="text-wrapper-2">Hi!</div>
-          <div className="transactions">Transactions</div>
-          <div className="your-balance-is">Your Balance Is</div>
-          <div className="text-wrapper-3">$15,615</div>
-          <div className="div-2">
-            <div className="home-indicator" />
-            <div className="overlap-2">
-            </div>
-            <div className="overlap-3">
-            </div>
-            <div className="ellipse-3" />
-            </div>
-          <img className="dollarsim-logos" alt="Dollarsim logos" src="dollarsim-logos-black-1.png" />
-        </div>
+      <div className='balance'>
+        <h1>Hi!</h1>
+        <h1>Your Balance Is</h1>
+        <h1>${balance}</h1>
+        <h2>Transactions</h2>
       </div>
+      <Transactions setBalance = {setBalance}/>
     </div>
   );
-};
+}
 
 export default MainPage;
