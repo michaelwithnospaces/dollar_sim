@@ -6,7 +6,7 @@ const JobPosting = require('../model/jobPostingsModel')
 const ConfirmedItem = require('../model/confirmedItemsModel')
 
 router.all('/*', (req, res, next)=> {
-    res.header("Access-Control-Allow-Origin", "http://localhost:3000");
+    res.header("Access-Control-Allow-Origin", "http://localhost:3000", "exp://10.228.64.177:8081");
     res.header("Access-Control-Allow-Headers", "X-Requested-With, Content-Type"); //needed to include the "Content-Type since that's what you used in the fetch POST function - these parameters trigger a preflight request from cors, so that's why you include them."
     res.header("Access-Control-Allow-Methods", "GET, POST, PATCH, PUT, DELETE");
     next();
