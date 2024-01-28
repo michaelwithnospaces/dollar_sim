@@ -4,6 +4,7 @@ module.exports = router
 const Transaction = require('../model/transactionsModel')
 const JobPosting = require('../model/jobPostingsModel')
 const ConfirmedItem = require('../model/confirmedItemsModel')
+const PotentialItem = require('../model/potentialItemsModel')
 
 router.all('/*', (req, res, next)=> {
     res.header("Access-Control-Allow-Origin", "http://localhost:3000", "exp://10.228.64.177:8081");
@@ -89,6 +90,43 @@ router.delete('/deleteJobPosting/:id', async (req, res) => {
     }
 })
 
+//PotentialItems endpoints: GET, POST, DELETE
+router.get('/allPotentialItems', async (req, res) => {
+    try {
+        const potentialItems = await PotentialItem.find({})
+        res.status(200).json(potentialItems)
+    } catch (error) {
+        res.status(500).json({message: err.message})
+    }
+})
+
+router.post('/newPotentialItem', async (req,res) => {
+    const potentialItem = new PotentialItem({
+        itemName: req.body.itemName,
+        price: req.body.price,
+        image: req.body.image,
+        purchased: req.body.purchased
+    })
+    try {
+        const newPotentialItem = await potentialItem.save()
+        res.status(201).json(newPotentialItem) //201 -> created something successfully
+    } catch (error) {
+        res.status(400).json({message: err.message}) //error 400: something wrong on user end such as bad data or unfilled data
+    }
+})
+
+router.delete('/deletePotentialItem/:id', async (req, res) => {
+    try {
+        const potentialItemQuery = PotentialItem.findById(req.params.id)
+        const potentialItem = await PotentialItem.findOneAndDelete(potentialItemQuery,{
+            new: true
+        })
+        res.status(200).json(potentialItem)
+    } catch (error) {
+        res.status(500).json({message: error.message})
+    }
+})
+
 //ConfirmedItemsForPurcharse endpoints: GET, POST, DELETE
 
 router.get('/allConfirmedItems', async (req, res) => {
@@ -100,7 +138,7 @@ router.get('/allConfirmedItems', async (req, res) => {
     }
 })
 
-router.post('/confirmedItem', async (req,res) => {
+router.post('/newConfirmedItem', async (req,res) => {
     const confirmedItem = new ConfirmedItem({
         itemName: req.body.itemName,
         price: req.body.price,

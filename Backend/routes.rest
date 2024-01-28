@@ -11,6 +11,9 @@ Content-Type: application/json
     "date": "1/4/24"
 }
 
+
+
+
 ###
 GET http://localhost:8000/finance/allJobPostings
 
@@ -32,22 +35,45 @@ Content-Type: application/json
     "salary": 9
 }
 
-
 ###
 DELETE http://localhost:8000/finance/deleteJobPosting/65b59f7dad838f81563004d0
+
+
+
+
+
+###
+GET http://localhost:8000/finance/allPotentialItems
+
+###
+POST http://localhost:8000/finance/newPotentialItem
+Content-Type: application/json
+
+{
+    "itemName": "mac-laptopPotential",
+    "price": 1000,
+    "image": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.amazon.com%2FApple-11-6-Inch-Integrated-Graphics-Refurbished%2Fdp%2FB07CCM5X58&psig=AOvVaw2vLP3yy71UvmHNoVudIGxN&ust=1706491288862000&source=images&cd=vfe&opi=89978449&ved=0CBMQjRxqFwoTCKDP1cr1_oMDFQAAAAAdAAAAABAE",
+    "purchased": true
+}
+
+###
+DELETE http://localhost:8000/finance/deletePotentialItem/65b5e686274913a3d4dec3ec
+
+
+
+
 
 ###
 GET http://localhost:8000/finance/allConfirmedItems
 
 ###
-POST http://localhost:8000/finance/confirmedItem
+POST http://localhost:8000/finance/newConfirmedItem
 Content-Type: application/json
 
 {
     "itemName": "mac-laptop",
     "price": 1000,
-    "image": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.amazon.com%2FApple-11-6-Inch-Integrated-Graphics-Refurbished%2Fdp%2FB07CCM5X58&psig=AOvVaw2vLP3yy71UvmHNoVudIGxN&ust=1706491288862000&source=images&cd=vfe&opi=89978449&ved=0CBMQjRxqFwoTCKDP1cr1_oMDFQAAAAAdAAAAABAE",
-    "purchased": true
+    "image": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.amazon.com%2FApple-11-6-Inch-Integrated-Graphics-Refurbished%2Fdp%2FB07CCM5X58&psig=AOvVaw2vLP3yy71UvmHNoVudIGxN&ust=1706491288862000&source=images&cd=vfe&opi=89978449&ved=0CBMQjRxqFwoTCKDP1cr1_oMDFQAAAAAdAAAAABAE"
 }
 
 ###
