@@ -2,13 +2,11 @@ import './App.css';
 import MainPage from './components/MainPage';
 import JobPostingForm from './components/JobPostingForm';
 import JobPostings from './components/JobPostings';
-// import Nav from './components/Nav.js'
-// import {Routes, Route} from 'react-router-dom';
+// import { Routes, Route} from 'react-router-dom';
 
 function App() {
   return (
     <div>
-      {/* <Nav /> */}
       <MainPage/>
       <JobPostingForm/>
       <JobPostings/>
