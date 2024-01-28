@@ -14,7 +14,7 @@ header{
   margin-right: clamp(10px, 50px, 100px);
 }
 body{
-  font-family: "Work Sans-Regular";
+  font-family: "JetBrains Mono";
   background-color: #86A7FC;
   color: white;
 }

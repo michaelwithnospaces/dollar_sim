@@ -6,6 +6,7 @@ import Nav from './components/NavBar';
 import Store from './components/Store';
 import ShoppingCart from './components/ShoppingCart';
 import Parent from './components/Parent';
+import EditJobPostingForm from './components/EditPostingForm';
 
 // import { Routes, Route} from 'react-router-dom';
 
@@ -30,19 +31,14 @@ function App() {
     case "/parent":
       component = <Parent/>
       break;
+    // case "/editJobPosting":
+    //   component = <EditJobPostingForm/>
+    //   break;
   }
   return (
     <div>
       <Nav/>
       {component}
-      {/* <MainPage/>
-      <JobPostingForm/>
-      <JobPostings/> */}
-        {/* <Routes>
-          <Route exact path = "/" element = {<MainPage />} />
-          <Route exact path = "/finance/jobPostings" element = {<JobPostings/>} />
-          <Route exact path = "/finance/jobPostingsForm" element = {<JobPostingForm/> } />
-        </Routes> */}
     </div>
   );
 }

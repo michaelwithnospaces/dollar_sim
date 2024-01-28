@@ -2,7 +2,7 @@
     align-items: center;
     appearance: none;
     /* background-image: radial-gradient(100% 100% at 100% 0, #5adaff 0, #5468ff 100%); */
-    background-color:lightblue;
+    background-color:rgb(22, 56, 68);
     border: 0;
     margin-bottom: 15px;
     border-radius: 6px;
@@ -30,7 +30,12 @@
     white-space: nowrap;
     /* will-change: box-shadow,transform; */
     font-size: 18px;
+    border-radius: 10px 10px 10px 10px;
   }
+.start-transaction-button{
+    align-items: center;
+    padding: 4px 4px 4px 4px;
+}
 /*   
   .buttons:focus {
     box-shadow: #3c4fe0 0 0 0 1.5px inset, rgba(45, 35, 66, .4) 0 2px 4px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;

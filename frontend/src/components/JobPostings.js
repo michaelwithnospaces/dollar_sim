@@ -3,6 +3,8 @@ import React, {useEffect, useState} from 'react'
 const JobPostings = () => {
     const [jobPostings, setJobPostings] = useState([])
     const [id, setID] = useState("");
+    const [title, setTitle] = useState("");
+    const [salary, setSalary] = useState();
 
     const urlJobPostings = "http://localhost:8000/finance/allJobPostings"
 
@@ -18,6 +20,15 @@ const JobPostings = () => {
     useEffect(() => {
         getJobPostings();
     },[])
+
+    const handlePost = () => {
+        window.location.pathname = '/jobPostingForm';
+    }
+
+    const urlEdit = `http://localhost:8000/finance/updateJobPosting/${id}`
+    const handleEdit = async (e) => {
+        window.location.pathname = '/editJobPosting' + id;
+    }
 
     const urlDelete = `http://localhost:8000/finance/deleteJobPosting/${id}`;
     const handleDelete = () => {
@@ -45,6 +56,8 @@ const JobPostings = () => {
             </ul>
 
             <button id={styles.deleteButton} onClick={handleDelete}>Delete Job</button>
+            <button id={styles.addButton} onClick = {handlePost}>Add Job Post</button>
+            {/* <button id={styles.editButton} onClick = {handleEdit}>Edit Job Post</button> */}
         </div>
     );
 }

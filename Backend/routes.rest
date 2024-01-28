@@ -5,10 +5,9 @@ POST http://localhost:8000/finance/newTransaction
 Content-Type: application/json
 
 {
-    "category": "electronics",
-    "item": "laptop",
-    "amount": -1000,
-    "date": "1/4/24"
+    "category": "food",
+    "item": "pizza",
+    "amount": -12
 }
 
 
@@ -50,10 +49,9 @@ POST http://localhost:8000/finance/newPotentialItem
 Content-Type: application/json
 
 {
-    "itemName": "mac-laptopPotential",
-    "price": 1000,
-    "image": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.amazon.com%2FApple-11-6-Inch-Integrated-Graphics-Refurbished%2Fdp%2FB07CCM5X58&psig=AOvVaw2vLP3yy71UvmHNoVudIGxN&ust=1706491288862000&source=images&cd=vfe&opi=89978449&ved=0CBMQjRxqFwoTCKDP1cr1_oMDFQAAAAAdAAAAABAE",
-    "purchased": true
+    "itemName": "Pink Fuzzy Gloves",
+    "price": 8.99,
+    "image": "https://i5.walmartimages.com/seo/Men-s-Women-s-Warm-Winter-Fuzzy-Cozy-Gloves-Light-Pink_6956376f-8af8-40b2-8020-ff4c5cb2e581.74ad7ac59fdc441ebd5b73cc7d5b707b.jpeg"
 }
 
 ###
@@ -71,9 +69,9 @@ POST http://localhost:8000/finance/newConfirmedItem
 Content-Type: application/json
 
 {
-    "itemName": "mac-laptop",
-    "price": 1000,
-    "image": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.amazon.com%2FApple-11-6-Inch-Integrated-Graphics-Refurbished%2Fdp%2FB07CCM5X58&psig=AOvVaw2vLP3yy71UvmHNoVudIGxN&ust=1706491288862000&source=images&cd=vfe&opi=89978449&ved=0CBMQjRxqFwoTCKDP1cr1_oMDFQAAAAAdAAAAABAE"
+    "itemName": "Pink Fuzzy Gloves",
+    "price": 8.99,
+    "image": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.walmart.com%2Fip%2FMen-s-Women-s-Warm-Winter-Fuzzy-Cozy-Gloves-White%2F774952341&psig=AOvVaw3Si1Kj0Vzv_ON-3Xd12dcy&ust=1706545584353000&source=images&cd=vfe&opi=89978449&ved=0CBMQjRxqFwoTCIDWxey_gIQDFQAAAAAdAAAAABAE"
 }
 
 ###

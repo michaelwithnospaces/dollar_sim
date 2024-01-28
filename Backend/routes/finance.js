@@ -27,8 +27,7 @@ router.post('/newTransaction', async (req,res) => {
     const transaction = new Transaction({
         category: req.body.category,
         item: req.body.item,
-        amount: req.body.amount,
-        date: req.body.date
+        amount: req.body.amount
     })
     try {
         const newTransaction = await transaction.save()
@@ -104,8 +103,7 @@ router.post('/newPotentialItem', async (req,res) => {
     const potentialItem = new PotentialItem({
         itemName: req.body.itemName,
         price: req.body.price,
-        image: req.body.image,
-        purchased: req.body.purchased
+        image: req.body.image
     })
     try {
         const newPotentialItem = await potentialItem.save()
