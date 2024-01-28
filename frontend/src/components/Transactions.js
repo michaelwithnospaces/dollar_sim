@@ -4,9 +4,15 @@ const Transactions = ({setBalance}) => {
     const [transactions, setTransactions] = useState([]);
     const [isTransactionLoaded, setIsTransactionLoaded] = useState(false);
     useEffect(()=>{
-        fetch('http://localhost:8000/finance/allTransactions')
+        fetch('http://localhost:8000/finance/allTransactions', {
+            method: "GET",
+            headers: {
+                "Content-Type": "application/json"
+            }
+        })
         .then((response) => response.json())
         .then((dataJson) => {
+            console.log(dataJson)
             let balance = 0;
             setIsTransactionLoaded(true)
             setTransactions(dataJson)
@@ -16,13 +22,13 @@ const Transactions = ({setBalance}) => {
             setBalance(balance);
         }).catch( (e) => console.log(e))
     },[])
-    console.log()
+
     return (
         <div className="transactions">
             {!isTransactionLoaded && <p>Loading...</p>}
-            {transactions.map((transaction) => {
+            {transactions.map((transaction, i) => {
                 return (
-                    <div id = {transaction.id}>
+                    <div key = {i} id = {transaction.id}>
                         <p>{transaction.category}</p>
                         <p>{transaction.item}</p>
                         <p>{transaction.amount}</p>

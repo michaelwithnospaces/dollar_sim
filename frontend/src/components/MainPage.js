@@ -5,13 +5,13 @@ const MainPage = () => {
   const [balance, setBalance] = useState(0);
   return (
     <div>
-      <header>
+      {/* <header>
         <div className = 'header-item'><img src={Logo} className='Logo'/></div>
         <div className = 'header-item'><a>Jobs</a></div>
         <div className = 'header-item'>Chat</div>
         <div className = 'header-item'>Store</div>
         <div className = 'header-item'>Profile</div>
-      </header>
+      </header> */}
       <div className='balance'>
         <h1>Hi!</h1>
         <h1>Your Balance Is</h1>
