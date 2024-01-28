@@ -5,6 +5,10 @@ const app = express()
 app.use(express.json())
 const financeRouter = require('./routes/finance')
 app.use('/finance', financeRouter)
+// const cors = require('cors')
+// app.use(cors({
+//     origin: ['http://localhost:3000']
+// })) 
 
 mongoose.connect(process.env.DATABASE_URL_FINANCE)
 const db = mongoose.connection
