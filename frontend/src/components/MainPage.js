@@ -1,8 +1,14 @@
 import React from "react";
 
-export const Header = () => {
+export const MainPage = () => {
   return (
     <div className="frame">
+      <header>
+        <a href = '' className="text-wrapper-4">Finances</a>
+        <a href = '' className="text-wrapper-5">Jobs</a>
+        <a href = '' className="text-wrapper-6">Chat</a>
+        <a href = '' className="text-wrapper-7">Store</a>
+      </header>
       <div className="overlap-wrapper">
         <div className="overlap">
           <img className="group" alt="Group" src="group.png" />
@@ -18,11 +24,7 @@ export const Header = () => {
             <div className="overlap-3">
             </div>
             <div className="ellipse-3" />
-            <div className="text-wrapper-4">Finances</div>
-            <div className="text-wrapper-5">Jobs</div>
-            <div className="text-wrapper-6">Chat</div>
-            <div className="text-wrapper-7">Store</div>
-          </div>
+            </div>
           <img className="dollarsim-logos" alt="Dollarsim logos" src="dollarsim-logos-black-1.png" />
         </div>
       </div>
@@ -30,4 +32,4 @@ export const Header = () => {
   );
 };
 
-export default Header;
+export default MainPage;
