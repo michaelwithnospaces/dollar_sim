@@ -52,7 +52,7 @@
 #deleteButton{
     position: absolute;
     left:35px;
-    top:280px;
+    top:220px;
     align-items: center;
     appearance: none;
     background-image: radial-gradient(100% 100% at 100% 0, #5adaff 0, #5468ff 100%);
@@ -88,7 +88,7 @@
 #addButton{
     position: absolute;
     left:1120px;
-    top:280px;
+    top:220px;
     align-items: center;
     appearance: none;
     background-image: radial-gradient(100% 100% at 100% 0, #5adaff 0, #5468ff 100%);

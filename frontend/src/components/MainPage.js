@@ -13,9 +13,9 @@ const MainPage = () => {
         <div className = 'header-item'>Profile</div>
       </header> */}
       <div className='balance'>
-        <h1>Hi!</h1>
-        <h1>Your Balance Is</h1>
-        <h1>${balance}</h1>
+        <h1>Welcome to DollarSim!</h1>
+        <h1>Your Balance Is:</h1>
+        <h1 style={{color: "rgb(22, 56, 68)"}}>${balance}</h1>
         <h2>Transactions</h2>
       </div>
       <Transactions setBalance = {setBalance}/>

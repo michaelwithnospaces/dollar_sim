@@ -23,7 +23,8 @@ const Store = () => {
             <div id = {styles.items} key = {i}>
                 <h3>{potentialItem.itemName}</h3>
                 <p>${potentialItem.price}</p>
-                <img height ="250px" src = {potentialItem.image} />
+                <img id={styles.pictures} height ="250px" src = {potentialItem.image} />
+                {/* <button id={styles.purchaseButton}>Purchase</button> */}
             </div>
         ))}
     </ul>

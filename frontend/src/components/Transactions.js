@@ -87,13 +87,13 @@ const Transactions = ({setBalance}) => {
                                 <div><button id={styles.buttons} key = {i} >{transaction.category} {transaction.item} {transaction.amount}$</button></div>
                             ))}
                         </ul>
-                        {!isTransactionStarted && <button className = "start-transaction-button" onClick={()=>{setIsTransactionStarted(true)}}>Start Transaction</button>}
+                        {!isTransactionStarted && <button id={styles.startTransButton} onClick={()=>{setIsTransactionStarted(true)}}>Start Transaction</button>}
                         {isTransactionStarted && <form>
-                                <input type = "string" placeholder="Insert category" onChange={(e) => {setCategory(e.target.value)}}></input>
-                                <input type = "string" placeholder="Insert item name" onChange={(e) => {setItemName(e.target.value)}}></input>
-                                <input type = "number" placeholder="Insert amount" onChange={(e) => {setAmount(e.target.value)}}></input>
-                                <input type = "string" placeholder="Insert pin" onChange={(e) => {setPin(e.target.value)}}></input>
-                                <button onClick={handleAdd}>Add Transaction</button> 
+                                <input style={{height: "30px", fontSize:"20px"}} type = "string" placeholder="Insert category" onChange={(e) => {setCategory(e.target.value)}}></input>
+                                <input style={{height: "30px", fontSize:"20px"}} type = "string" placeholder="Insert item name" onChange={(e) => {setItemName(e.target.value)}}></input>
+                                <input style={{height: "30px", fontSize:"20px"}} type = "number" placeholder="Insert amount" onChange={(e) => {setAmount(e.target.value)}}></input>
+                                <input style={{height: "30px", fontSize:"20px"}} type = "string" placeholder="Insert pin" onChange={(e) => {setPin(e.target.value)}}></input>
+                                <button style={{height: "40px", fontSize:"20px"}} onClick={handleAdd}>Add Transaction</button> 
                             </form>
                         }
                     </div>

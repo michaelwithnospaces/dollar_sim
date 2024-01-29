@@ -37,7 +37,7 @@ router.post('/newTransaction', async (req,res) => {
     }
 })
 
-//Job Postings Endpoints: GET, POST, PUT, DELETE
+//Job Postings Endpoints: GET, POST, DELETE
 router.get('/allJobPostings', async (req, res) => {
     try {
         const jobPostings = await JobPosting.find({})
@@ -57,23 +57,6 @@ router.post('/newJobPosting', async (req,res) => {
         res.status(201).json(newJobPosting) //201 -> created something successfully
     } catch (error) {
         res.status(400).json({message: err.message}) //error 400: something wrong on user end such as bad data or unfilled data
-    }
-})
-
-router.put('/updateJobPosting/:id', async (req,res) => {
-    try {
-        const jobPostingQuery = JobPosting.findById(req.params.id)
-        const jobPosting = await JobPosting.findOneAndUpdate(jobPostingQuery, {
-            "title": req.body.title,
-            "salary": req.body.salary
-        },
-        {
-            new: true //returns modified instead of original, so updated json object is given instead of original
-        }
-        )
-        res.status(200).json(jobPosting)     
-    } catch (error) {
-        res.status(500).json({message: error.message})
     }
 })
 
